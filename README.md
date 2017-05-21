@@ -50,6 +50,6 @@ Delete publisher|http://localhost:8080/api/publisher/{id}|DELETE
 Etc...|...|...
 
 # Contribution
-Any kind of contribution are welcome. If you are a student and not too familieer with coding, you can contribute by posting an issue or writing some documentation or discussing new featurs in the system. If you are an expert and love to share yours, please make some changes and create pull request. Any of your contributions will appreciate by others who are learning our porject. 
+Any kind of contribution are welcome. If you are a student and not too familieer with coding, you can contribute by posting an issue or writing some documentation or discussing new featurs in the system. If you are an expert and love to share yours, please make some changes and create pull request. Any of your contributions will appreciate by others who are learning and maintaining our porject. 
 
 
