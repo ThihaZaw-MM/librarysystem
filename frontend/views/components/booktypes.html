@@ -1,0 +1,37 @@
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<i class="fa fa-align-justify"></i> Book Types
+                    <a ui-sref="app.components.newbooktype" class="btn btn-sm btn-primary float-right"><i class="fa fa-dot-circle-o"></i> New Book Type</a>
+				</div>
+				<div class="card-header">
+                    <i class="fa fa-filter"></i> Filters &nbsp
+                	<input type="text" placeholder="Book Type Name" ng-model="pName"/>
+                </div>
+                <div class="card-block">
+                	<table class="table table-bordered table-striped table-condensed">
+                		<thead>
+                            <tr>
+                                <th>Book Type Name</th>
+			                    <th>Category</th>
+								<th>Action</th>
+			                </tr>
+			                <tbody>
+			                	<tr ng-repeat="booktype in bookTypeCtrl.bookTypes | filter:{booktypeName:pName}">
+			                		<td>{{booktype.bookTypeName}}</td>
+                                	<td>{{booktype.category}}</td>
+									<td>
+										<a ui-sref="app.components.editbooktype({booktype: booktype})" class="btn btn-sm btn-success"><i class="fa fa-edit"></i> Edit</a>
+										<input type="button" value="Delete" class="btn btn-sm btn-danger" ng-click="bookTypeCtrl.deleteBookType(booktype.id)"/>
+									</td>
+			                	</tr>
+			                </tbody>
+                        </thead>
+                	</table>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-header">
+					<i class="fa fa-align-justify"></i> Locations
+                    <a ui-sref="app.components.newlocation" class="btn btn-sm btn-primary float-right"><i class="fa fa-dot-circle-o"></i> New Location</a>
+				</div>
+				<div class="card-header">
+                    <i class="fa fa-filter"></i> Filters &nbsp
+                	<input type="text" placeholder="location" ng-model="pName"/>
+                </div>
+                <div class="card-block">
+                	<table class="table table-bordered table-striped table-condensed">
+                		<thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>location</th>
+			                </tr>
+			                <tbody>
+			                	<tr ng-repeat="location in locCtrl.locations | filter:{locationName:pName}">
+			                		<td>{{location.id}}</td>
+                                	<td>{{location.locationName}}</td>
+									<td>
+										<a ui-sref="app.components.editlocation({location: location})" class="btn btn-sm btn-success"><i class="fa fa-edit"></i> Edit</a>
+										<input type="button" value="Delete" class="btn btn-sm btn-danger" ng-click="locCtrl.deleteLocation(location.id)"/>
+									</td>
+			                	</tr>
+			                </tbody>
+                        </thead>
+                	</table>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

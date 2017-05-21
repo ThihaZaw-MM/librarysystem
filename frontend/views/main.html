@@ -1,0 +1,138 @@
+<div class="animated fadeIn">
+    <div class="row">
+
+        <!-- Member Status -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card card-inverse card-primary" ng-controller="memberCountCtrl">
+                <div class="card-block pb-0">
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">New Member</a>
+                            <a class="dropdown-item" href="#">Borrow Book</a>
+                            <a class="dropdown-item" href="#">Show Member List</a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0">1000</h4>
+                    <p>Members</p>
+                </div>
+                <div class="chart-wrapper px-1" style="height:70px;">
+                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Status -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card card-inverse card-info" ng-controller="bookStatusCtrl">
+                <div class="card-block pb-0">
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">New Book</a>
+                            <a class="dropdown-item" href="#">Borrow Book</a>
+                            <a class="dropdown-item" href="#">Show Book List</a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0">60000</h4>
+                    <p>Books</p>
+                </div>
+                <div class="chart-wrapper px-1" style="height:70px;">
+                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author Status -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card card-inverse card-warning" ng-controller="authorStatusCtrl">
+                <div class="card-block pb-0">
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">New Author</a>
+                            <a class="dropdown-item" href="#">Show Author List</a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0">3000</h4>
+                    <p>Authors</p>
+                </div>
+                <div class="chart-wrapper" style="height:70px;">
+                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colors="colors" height="70"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publisher status -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card card-inverse card-danger" ng-controller="publisherStatusCtrl">
+                <div class="card-block pb-0">
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0">600</h4>
+                    <p>Publishers</p>
+                </div>
+                <div class="chart-wrapper px-1" style="height:70px;">
+                    <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors" height="70"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    New arrivals in this week
+                </div>
+                <div class="card-block">
+                    <ul class="icons-list" ng-controller="newArrivalCtrl">
+                        <li ng-repeat="book in data">
+                            <i class="icon-notebook bg-primary"></i>
+                            <div class="desc">
+                                <div class="title">{{book.title}}</div>
+                                <small>{{book.authorName}}</small>
+                            </div>
+                            <div class="value">
+                                <div class="small text-muted">Published by: {{book.publisherName}}</div>
+                                <strong>$ {{book.value}}</strong>
+                            </div>
+                            <div class="actions">
+                                <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Borrowed Members
+                </div>
+                <div class="card-block">
+                    <p>Coming soon....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

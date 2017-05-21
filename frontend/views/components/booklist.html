@@ -1,0 +1,62 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Books
+                </div>
+                <div class="card-header">
+                    <i class="fa fa-filter"></i> Filters
+                    <input type="text" placeholder="Book Name" ng-model="pName"/>
+                    <a ui-sref="app.components.newbook" class="btn btn-sm btn-primary float-right"><i class="fa fa-dot-circle-o"></i> New Book</a>
+                </div>
+                <div class="card-block">
+                    <table class="table table-hover table-outline mb-0 hidden-sm-down">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><i class="icon-notebook"></i></th>
+                                <th>Book Title</th>
+			                    <th>Author</th>
+			                    <th>Publisher</th>
+			                    <th>Value</th>
+                                <th>Action</th>
+			                </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="book in bookCtrl.books | filter:{title:pName}">
+                                <td class="text-center">
+                                    <div class="avatar">
+                                        <img src="img/book.png" class="img-avatar"/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        {{ book.title }}
+                                        <br/>
+                                        <span class="text-info">
+                                            {{book.languageName}}
+                                        </span>
+                                        <span class="text-success">
+                                            ISBN: {{book.isbn}}
+                                        </span>
+                                    </div>
+                                    <div class="small text-muted">
+                                        <span class="badge badge-info">{{book.locationName}}</span>
+                                        <span class="badge badge-success">{{book.bookTypeName}}</span>
+                                    </div>
+                                </td>
+                                <td>{{book.authorName}}</td>
+                                <td>{{book.publisherName}}</td>
+                                <td>$ {{book.value}}</td>
+                                <td>
+                                    <a ui-sref="app.components.editbook({book: book})" class="btn btn-sm btn-success"><i class="fa fa-edit"></i> Edit</a>
+                                    <input type="button" value="Delete" class="btn btn-sm btn-danger" ng-click="bookCtrl.deleteBook(book.id)"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

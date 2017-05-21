@@ -1,0 +1,30 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">&#9776;</button>
+    <a class="navbar-brand" ui-sref="app.main"></a>
+    <ul class="nav navbar-nav hidden-md-down">
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler sidebar-toggler" href="#">&#9776;</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto hidden-md-down">
+        
+        <li class="nav-item dropdown" ng-class="{open: $state.includes('app.pages')}">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <img src="img/patient_avata.png" class="img-avatar" alt="Image"/>
+                <span class="hidden-md-down">{{$rootScope.globals.currentUser.email}}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+
+                <div class="dropdown-header text-center">
+                    <strong>Account</strong>
+                </div>
+
+                <a class="dropdown-item" ui-sref="appSimple.login"><i class="fa fa-lock"></i> Logout</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler " href="#">&#9776;</a>
+        </li>
+
+    </ul>
+</header>

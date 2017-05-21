@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card mx-2">
+					<div class="card-block p-2">
+						<h1>Author</h1>
+                        <p class="text-muted">Enter Author Info</p>
+                        <form ng-submit="authorCtrl.submit()" name="myForm">
+                        	<input type="hidden" ng-model="authorCtrl.author.id"/>
+                        	<div class="input-group mb-1">
+	                            <span class="input-group-addon"><i class="icon-check"></i>
+	                            </span>
+	                            <input ng-model="authorCtrl.author.authorName" type="text" class="form-control" placeholder="Author Name" required />
+	                        </div>
+	                        <div class="input-group mb-1">
+	                            <span class="input-group-addon"><i class="icon-home"></i>
+	                            </span>
+	                            <input ng-model="authorCtrl.author.address" type="text" class="form-control" placeholder="Address" required />
+	                        </div>
+							<div class="input-group mb-1">
+	                            <span class="input-group-addon"><i class="icon-phone"></i>
+	                            </span>
+	                            <input ng-model="authorCtrl.author.phone" type="text" class="form-control" placeholder="Phone" />
+	                        </div>
+	                        <button type="submit" class="btn btn-block btn-success">Save</button>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

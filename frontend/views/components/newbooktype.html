@@ -1,0 +1,28 @@
+<div class="animated fadeIn">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card mx-2">
+					<div class="card-block p-2">
+						<h1>Book Type</h1>
+                        <p class="text-muted">Enter Book Type Info</p>
+                        <form ng-submit="bookTypeCtrl.submit()" name="myForm">
+                        	<input type="hidden" ng-model="bookTypeCtrl.bookType.id"/>
+                        	<div class="input-group mb-1">
+	                            <span class="input-group-addon"><i class="icon-check"></i>
+	                            </span>
+	                            <input ng-model="bookTypeCtrl.bookType.bookTypeName" type="text" class="form-control" placeholder="Book Type Name" required />
+	                        </div>
+	                        <div class="input-group mb-1">
+	                            <span class="input-group-addon"><i class="icon-notebook"></i>
+	                            </span>
+	                            <input ng-model="bookTypeCtrl.bookType.category" type="text" class="form-control" placeholder="Category" required />
+	                        </div>
+	                        <button type="submit" class="btn btn-block btn-success">Save</button>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

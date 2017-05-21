@@ -1,0 +1,48 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><i class="icon-speedometer"></i> Dashboard </a>
+            </li>
+
+            <li class="divider"></li>
+            <li class="nav-title">
+                Menu
+            </li>
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
+            	<a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-puzzle"></i> References</a>
+            	<ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.publisher"><i class="icon-paper-clip"></i> Publisher</a>
+                    </li>
+            		<li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.author"><i class="icon-user"></i> Author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.booktype"><i class="icon-notebook"></i> Book Type</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.language"><i class="icon-directions"></i> Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.location"><i class="icon-location-pin"></i> Location</a>
+                    </li>
+            	</ul>
+            </li>
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
+                <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-layers"></i> Services</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.books"><i class="icon-eyeglass"></i> Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.members"><i class="icon-people"></i> Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.borrow"><i class="icon-emotsmile"></i> Borrow</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
